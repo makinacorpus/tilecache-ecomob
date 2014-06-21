@@ -390,7 +390,7 @@ class MetaLayer (Layer):
         return MetaTile(self, x, y, tile.z) 
 
     def renderMetaTile (self, metatile, tile):
-        import StringIO, Image
+        import StringIO, PIL.Image as Image
 
         data = self.renderTile(metatile)
         image = Image.open( StringIO.StringIO(data) )
